@@ -46,6 +46,10 @@
 //Вывести каждую при помощи console.log , alert, document.write
 
 // let wordHello = 'hello';
+// console.log(wordHello)
+// alert(wordHello);
+// document.write(wordHello)
+//
 // wordHello = 'good bye'
 // console.log(wordHello)
 // alert(wordHello);
@@ -72,6 +76,27 @@
 // alert(secondString);
 // document.write(secondString)
 
+// const thirtString = 'Happy';
+// console.log(thirtString);
+// alert(thirtString);
+// document.write(thirtString)
+
+// const firstNumber = 12;
+// console.log(firstNumber);
+// alert(firstNumber);
+// document.write(firstNumber)
+
+// const  secondNumber = 22;
+// console.log(secondNumber);
+// alert(secondNumber);
+// document.write(secondNumber);
+
+// const thirdNumber = 33;
+// console.log(thirdNumber);
+// alert(thirdNumber);
+// document.write(thirdNumber)
+
+
 //--4--
 //- при помощи 3х разных prompt() получить 3 слова которые являются вашими ФИО.
 // Для фамилии имени и отчества создать разные переменные.
@@ -80,12 +105,10 @@
 // let surname = prompt('Введіть ваше прізвище');
 // let name = prompt('Введіть ваше імя');
 // let fatherName = prompt('Введіть ваше по-батькові');
-// console.log(surname);
-// console.log(name);
-// console.log(fatherName);
-// document.write(surname + ' ');
-// document.write(name + ' ');
-// document.write(fatherName)
+// console.log(surname + ' ' + name + ' ' + fatherName);
+// document.write(surname + ' ' + name + ' ' + fatherName);
+// alert(surname + ' ' + name + ' ' + fatherName)
+
 
 //--5--
 //- Взять переменные из задания 4 и сконкатенировать их в одной переменной person.
@@ -389,3 +412,79 @@
 // let surName = prompt('Ваше прізвище?');
 // let age = prompt('Ваш вік?');
 // alert(`Доброго вечера ${name} ${surName}, мои поздравления что вам ${age}`)
+//
+// =====================
+// ======ДОП============
+// =====================
+//
+//
+//
+
+// 1. Три різних числа вводяться через prompt().
+//     За допомоги if else вивести іх в порядку зростання. (відсортувати по зростанню)
+
+// let a = +prompt('введіть перше число');
+// let b = +prompt('введіть друге число');
+// let c = +prompt('введіть третє число');
+// if (a > b && a > c && b > c) {
+//     document.write(`${a} ${b} ${c}`)
+// } else if (b > a && b > c && a > c) {
+//     document.write(`${b} ${a} ${c}`)
+// } else if (c > a && c > b && a > b) {
+//     document.write(`${c} ${a} ${b}`)
+// } else if (c > a && c > b && b > a) {
+//     document.write(`${c} ${b} ${a}`)
+// }
+
+
+// 2.
+// Все параматры получаем с клавиатуры!!!!
+//     Имитируем поведение пешехода на перекстке.
+//     Если светофор зеленый - вывести "иди".
+//     Если светофор желтый - вывести "подожди".
+//     Если светофор красный - вывести "стой".
+//     Если светофор в аварийном режиме вывести "делай что хочешь"!
+//
+
+// let color = prompt('Введіть колір світлофора');
+// if ( color === 'зелений') {
+//     document.write('Йди')
+// } else if (color === 'жовтий') {
+//     document.write('Зачекай')
+// }  else if (color === 'червоний') {
+//     document.write('стоп')
+// } else {
+//     document.write('роби що хочеш')
+// }
+
+
+//     3
+// Все параметры получаем с клавиатуры!!!!(prompt , confirm)
+// Создать переменную isRoadClear которая характеризирует наличие на дороге машин.
+//     Улучшаем предыдущее задание.
+//     Если светофор зеленый и машин нет - вывести "иди".
+//     Если светофор зеленый и машины есть  - вывести подожди пока нарушители проедут".
+// Если светофор желтый и машины есть - вывести "жди".
+//     Если светофор желтый и машин нет - вывести "все рано жди".
+//     Если светофор красный и машин нет- вывести "стой все рано".
+//     Если светофор красный - и машины есть вывести "стой и жди".
+//     Если светофор в аварийном режиме вывести "делай что хочешь"!
+
+
+// let color = prompt('Введіть колір світлофора');
+// let isRoadClear = confirm('На дорозі відсутні машини?')
+// if (color === 'зелений' && isRoadClear) {
+//     document.write('Йди')
+// } else if (color === 'зелений') {
+//     document.write('Зачекай доки порушники проїдуть')
+// } else if (color === 'жовтий' && isRoadClear) {
+//     document.write('Все одно зачекай')
+// } else if (color === 'жовтий') {
+//     document.write('Зачекай')
+// } else if (color === 'червоний' && isRoadClear) {
+//     document.write('Все одно стій')
+// } else if (color === 'червоний') {
+//     document.write('Стій і чекай')
+// } else {
+//     document.write('роби що хочеш')
+// }
