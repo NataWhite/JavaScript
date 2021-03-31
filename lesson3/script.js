@@ -213,12 +213,12 @@
 // Колір отримати з prompt()
 
 // let header = document.getElementsByClassName('sub-header');
-
+//
 // let color = prompt('Enter color');
 // for (let i = 0; i < header.length; i++) {
 //     header[i].style.backgroundColor = color
 // }
-
+//
 // let color = prompt('Enter color');
 // for (let i = 0; i < header.length; i++) {
 //     if ( header[i].textContent === 'content 2 segment') {
