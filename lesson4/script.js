@@ -306,7 +306,7 @@
 //     let newArray = [...array]
 //     for (let i = 0; i < newArray.length; i++) {
 //         if (i === index) {
-//             newArray[i] = index + 1
+//             newArray[i]++
 //         }
 //     }
 //     return newArray
