@@ -151,3 +151,4 @@ console.log(goPlayGame);
 let goPlayGame2 = new GamePC(8, 800, 'Apple');
 goPlayGame2.startPlayGame();
 console.log(goPlayGame2)
+
