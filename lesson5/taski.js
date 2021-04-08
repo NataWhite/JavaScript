@@ -26,6 +26,7 @@
 // console.log(uniqueNumber(arrayOne));
 // console.log(uniqueNumber(arrayTwo))
 
+
 //-------------------------------------------------------------------------------
 // - Дано список імен.
 // let n1 = '    Harry       Potter      '
