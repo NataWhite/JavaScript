@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>lesson7</title>
+    </head>
+
+    <body>
+        <div style="width: 400px">
+            <form>
+                <input id="button" type="button" value="сховати текст">
+                <p id="text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi blanditiis cumque debitis facilis,
+                    mollitia
+                    necessitatibus perferendis quo recusandae? Amet consequatur debitis delectus dolore ducimus eaque
+                    earum
+                    itaque natus provident, saepe.
+
+                </p>
+                <hr>
+
+                <input id="hideButton" type="button" value="сховати кнопку">
+                <hr>
+
+                Скільки тобі років?
+                <input id="age" type="text">
+                <input id="submitOfAge" type="submit" value="Ok">
+
+
+            </form>
+            <hr>
+            <div id="list">
+                <h3 id="daysOfWeek">Дні тижня(натисни сюди)</h3>
+                <ul>
+                    <li>Понеділок</li>
+                    <li>Вівторок</li>
+                    <li>Середа</li>
+                    <li>Четвер</li>
+                    <li>П'ятниця</li>
+                    <li>Субота</li>
+                    <li>Неділя</li>
+                </ul>
+            </div>
+            <hr>
+
+            <form id="primitiveData" name="listOfPrimitiveData">
+
+            </form>
+            <hr>
+
+            <div>
+                <h3>розкажи про себе</h3>
+                <form name="myFormOne">
+                    <p>Як тебе звати?</p>
+                    <input name="yourName" type="text">
+                    <br>
+                    <p>Скільки тобі років?</p>
+                    <input name="yourAge" type="text">
+                </form>
+                <hr>
+                <form name="myFormTwo">
+                    <p>Що ти любиш?</p>
+                    <input name="check" type="radio">Чай
+                    <input name="check" type="radio">Кава
+                </form>
+                <hr>
+                <input id="submitButton" type="submit" value="Ok">
+            </div>
+            <div id="divForTable">
+
+            </div>
+            <hr>
+            <div id="divForSpecialTable">
+                <form name="formForTable">
+                    <p>Кількість рядків</p>
+                    <input name="numberOfRow" type="text">
+                    <p>Кількість колонок</p>
+                    <input name="numberOfData" type="text">
+                    <p>Текст для ячейки</p>
+                    <input name="context" type="text">
+                    <hr>
+                </form>
+                <input id="madeTable" type="submit" value="creat table">
+
+            </div>
+            <hr>
+
+            <div  style="display: flex">
+                <div style="line-height: 200px; height: 200px">
+                    <input id="reverse" type="button" value="назад">
+                </div>
+                <div id="pictures" style="width: 250px; display: ">
+                    <div >
+                        <img height="200px" src="images/cerry.jpg" width="200px">
+                    </div>
+                    <div style="display: none">
+                        <img height="200px" src="images/strawberry.jpg" width="200px">
+                    </div>
+                    <div style="display: none">
+                        <img height="200px" src="images/grapes.jpg" width="200px">
+                    </div>
+
+                </div>
+                <div style="line-height: 200px; height: 200px">
+                    <input id="forward" type="button" value="вперед">
+                </div>
+            </div>
+
+
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
