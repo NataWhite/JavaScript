@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <div>
+            <textarea cols="30" id="text" rows="10"></textarea>
+        </div>
+        <hr>
+        <form id="myForm" oninput="saveForm(this)">
+            <h4>Напиши щось про себе</h4>
+            <textarea cols="30" id="textArea" rows="10"></textarea>
+
+            <h4>Яка в тебе стать?</h4>
+            жіноча
+            <input id="inputFemale" name="gender" type="radio">
+            чоловіча
+            <input id="inputMale" name="gender" type="radio">
+
+            <h4>яке в тебе хоббі?</h4>
+            книги
+            <input id="chekOne" type="checkbox">
+            JavaScript
+            <input id="chekTwo" type="checkbox">
+            фільми
+            <input id="chekThree" type="checkbox">
+            інше
+            <input id="checkFour" type='checkbox'>
+            <h4>де ти живеш?</h4>
+            <select id="select">
+                <option></option>
+                <option>Київ</option>
+                <option>Львів</option>
+                <option>Харків</option>
+            </select>
+
+        </form>
+        <hr>
+        <div>
+            <div>
+                <input id='reverse' type="button" value="назад">
+                <input id="forward" type="button" value="вперед">
+            </div>
+            <textarea cols="30" id="someTextArea" rows="10"></textarea>
+            <br>
+            <input id="save" type="submit" value="ok">
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
