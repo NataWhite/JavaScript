@@ -130,11 +130,11 @@ function creat() {
         let buttonEdit = document.createElement('button');
         buttonEdit.innerText = `edit`;
         buttonEdit.id = contact.id;
-        buttonEdit.onclick = () => {
+        buttonEdit.onclick = () => {              //  тут роблю клік на кнопочку редагувати
             let parseList = JSON.parse(localStorage.getItem(usersContacts));
             let filterList = parseList.filter(user => user.id !== buttonEdit.id);
             let findUser = parseList.find(listItem => listItem.id === buttonEdit.id);
-            console.log(findUser);
+  
             for (let i = 0; i < phonebook.length; i++) {
                 document.getElementById(phonebook[i].id).value = findUser[phonebook[i].id]
                 document.getElementById(phonebook[i].id).value = findUser[phonebook[i].id]
@@ -145,7 +145,7 @@ function creat() {
         let buttonDelete = document.createElement('button');
         buttonDelete.innerText = `delete`;
         buttonDelete.id = contact.id;
-        buttonDelete.onclick = () => {
+        buttonDelete.onclick = () => {                   //  тут роблю клік на кнопочку видалити
             let parseList = JSON.parse(localStorage.getItem(usersContacts));
             let idToDelete = buttonDelete.id
             let findIdToRemove = parseList.find(user => user.id = idToDelete)
