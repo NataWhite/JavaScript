@@ -82,7 +82,6 @@
 // }
 
 
-
 //====================================
 // - Реализуйте записную книгу, хранящую данные в локальном хранилище.
 //     Данные которые надо сохранять : ФИО, номер, почта, фирма, отдел, день рождения
@@ -90,5 +89,86 @@
 // --Каждому контакту добавить кнопку для удаления контакта.
 // --Каждому контакту добавить кнопку редактироваиня. При нажати на нее появляется форма,
 // в которой есть все необходимые инпуты для редактирования, которые уже заполнены данными объекта
+
+let phonebook = document.getElementById('phoneBook')
+usersContacts = 'usersContacts';
+listOfUser = []
+
+if (!localStorage.getItem(usersContacts)) {
+    localStorage.setItem(usersContacts, JSON.stringify(listOfUser))
+}
+creat()           // створюю поле юзера, вивожу його в документ, вішаю кліки на кнопочки
+
+phonebook.onsubmit = () => {
+    let user = {}
+    for (let i = 0; i < phonebook.length; i++) {
+        user[phonebook[i].id] = phonebook[i].value
+    }
+    user.name === '' ?
+        user.id = `Контакт${Math.floor(Math.random() * 1000)}` :
+        user.id = `${user.name}${Math.floor(Math.random() * 1000)}`;
+    let parseUsers = JSON.parse(localStorage.getItem(usersContacts));
+    parseUsers.push(user);
+    localStorage.setItem(usersContacts, JSON.stringify(parseUsers));
+
+}
+
+
+function creat() {
+
+    let parseList = JSON.parse(localStorage.getItem(usersContacts))
+    for (const contact of parseList) {
+        let block = document.createElement('div');
+        block.id = `${contact.name}${contact.id}`
+        let title = document.createElement('h3')
+        title.innerText = contact.name
+        let user = document.createElement('p');
+        user.innerText = `Phone: ${contact.number}, Email: ${contact.mail}, Company: ${contact.company},
+         Department: ${contact.department} , BirthDAy: ${contact.birth}`;
+        block.appendChild(title);
+        block.appendChild(user);
+        let buttonEdit = document.createElement('button');
+        buttonEdit.innerText = `edit`;
+        buttonEdit.id = contact.id;
+        buttonEdit.onclick = () => {
+            let parseList = JSON.parse(localStorage.getItem(usersContacts));
+            let filterList = parseList.filter(user => user.id !== buttonEdit.id);
+            let findUser = parseList.find(listItem => listItem.id === buttonEdit.id);
+            console.log(findUser);
+            for (let i = 0; i < phonebook.length; i++) {
+                document.getElementById(phonebook[i].id).value = findUser[phonebook[i].id]
+                document.getElementById(phonebook[i].id).value = findUser[phonebook[i].id]
+            }
+            localStorage.setItem(usersContacts,JSON.stringify(filterList))
+        }
+        block.appendChild(buttonEdit);
+        let buttonDelete = document.createElement('button');
+        buttonDelete.innerText = `delete`;
+        buttonDelete.id = contact.id;
+        buttonDelete.onclick = () => {
+            let parseList = JSON.parse(localStorage.getItem(usersContacts));
+            let idToDelete = buttonDelete.id
+            let findIdToRemove = parseList.find(user => user.id = idToDelete)
+            let filterList = parseList.filter(item => item.id !== idToDelete);
+            localStorage.setItem(usersContacts, JSON.stringify(filterList));
+            document.getElementById(`${findIdToRemove.name}${findIdToRemove.id}`).remove()
+
+        }
+
+        block.appendChild(buttonDelete);
+        document.getElementById('listOfUser').appendChild(block);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
